@@ -55,10 +55,13 @@ export const produceRducer = (draft, action) => {
     case ReducerActions.ADD_CHARACTER: {
       draft.characters[action.character] = { ...defaultCharacter }
       draft.selectedCharacter = action.character
+      draft.addCharacterIsOpen = false
       break
     }
     case ReducerActions.REMOVE_CHARACTER: {
-      delete draft.characters[action.character]
+      console.log('removing: ', draft.selectedCharacter)
+      delete draft.characters[draft.selectedCharacter]
+      draft.selectedCharacter = Object.keys(draft.characters)[0] || null
       break
     }
     case ReducerActions.SELECT_CHARACTER: {
@@ -130,8 +133,15 @@ export function AppProvider ({ children }) {
       type: ReducerActions.ADD_CHARACTER,
       character
     }),
+    removeCharacter: () => dispatch({
+      type: ReducerActions.REMOVE_CHARACTER
+    }),
+    selectCharacter: (character) => dispatch({
+      type: ReducerActions.SELECT_CHARACTER,
+      character
+    }),
     toggleAddCharacter: () => dispatch({
-      type: ReducerActions.TOGGLE
+      type: ReducerActions.TOGGLE_ADD_CHARACTER
     }),
     toggleAshOfWar: (ashOfWar) => dispatch({
       type: ReducerActions.TOGGLE_ASH_OF_WAR,

@@ -4,16 +4,14 @@ import { useAppContext } from '../Context/AppContext'
 import { AddCharacter } from './AddCharacter'
 
 export function CharacterSelector () {
-  const { state: { characters, selectedCharacter }, dispatch } = useAppContext()
+  const {
+    actions: { removeCharacter, selectCharacter },
+    state: { characters, selectedCharacter }
+  } = useAppContext()
 
-  const handleCharacterSelect = (e) => dispatch({
-    type: 'selectCharacter',
-    value: e.target.value
-  })
+  const handleCharacterSelect = (e) => selectCharacter(e.target.value)
 
-  const handleDeleteClick = () => dispatch({
-    type: 'removeCharacter'
-  })
+  const handleDeleteClick = () => removeCharacter()
 
   return (
     <Grid templateColumns='4fr 1fr 1fr' w='100%' gap={4}>
