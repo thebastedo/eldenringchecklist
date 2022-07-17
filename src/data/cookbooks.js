@@ -53,6 +53,9 @@ export const cookbooks = [
   'Perfumer\'s Cookbook [2]',
   'Perfumer\'s Cookbook [3]',
   'Perfumer\'s Cookbook [4]',
+  'Fervor\'s Cookbook [1]',
+  'Fervor\'s Cookbook [2]',
+  'Fervor\'s Cookbook [3]',
   'Frenzied\'s Cookbook [1]',
   'Frenzied\'s Cookbook [2]'
 ]

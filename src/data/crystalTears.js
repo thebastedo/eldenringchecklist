@@ -20,9 +20,11 @@ export const crystalTears = [
   'Spiked Cracked Tear',
   'Thorny Cracked Tear',
   'Twiggy Cracked Tear',
+  'Winged Crystal Tear',
   'Windy Crystal Tear',
   'Opaline Bubbletear',
   'Crimson Bubbletear',
+  'Crimsonwhorl Bubbletear',
   'Cerulean Hidden Tear',
   'Purifying Crystal Tear',
   'Ruptured Crystal Tear'

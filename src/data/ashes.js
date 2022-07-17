@@ -40,7 +40,7 @@ export const ashes = [
   'Giant Hunt',
   'Storm Blade',
   'Storm Assault',
-  'Storm Caller',
+  'Stormcaller',
   'Storm Stomp',
   'Vaccum Slice',
   'Phantom Slash',
@@ -79,7 +79,7 @@ export const ashes = [
   'Seppuku',
   'Ice Spear',
   'Chilling Mist',
-  'HoarFrost Stomp',
+  'Hoarfrost Stomp',
   'Spectral Lance',
   'Lifesteal Fist',
   'White Shadow\'s Lure',
@@ -89,6 +89,7 @@ export const ashes = [
   'Barrage',
   'Sky Shot',
   'Rain of Arrows',
+  'Enchanted Shot',
   'Parry',
   'Golden Parry',
   'Storm Wall',
@@ -97,8 +98,7 @@ export const ashes = [
   'Barricade Shield',
   'Thop\'s Barrier',
   'Carian Retaliation',
-  'No Skill',
-  'Lost Ashes of War'
+  'No Skill'
 ]
 
 // export const ashes = [
