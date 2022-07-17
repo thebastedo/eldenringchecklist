@@ -1,42 +1,33 @@
-import React from 'react';
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
   Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+  GridItem,
+  theme
+} from '@chakra-ui/react'
 
-function App() {
+import { AppProvider } from './Context/AppContext'
+import { Checklists } from './Components/Checklists'
+import { Header } from './Components/Header'
+import { Navigation } from './Components/Navigation'
+
+function App () {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
+    <AppProvider>
+      <ChakraProvider theme={theme}>
+        <Grid
+          templateColumns="10rem 1fr"
+          templateRows="5rem 1fr"
+          gap="1rem"
+        >
+          <GridItem rowSpan={2} colSpan={2}>
+            <Header />
+          </GridItem>
+          <Navigation />
+          <Checklists />
         </Grid>
-      </Box>
-    </ChakraProvider>
-  );
+      </ChakraProvider>
+    </AppProvider>
+  )
 }
 
-export default App;
+export default App
