@@ -5,10 +5,10 @@ import { CharacterSelector } from './CharacterSelector'
 export function Header () {
   return (
     <header>
-      <Grid templateColumns='4fr 1fr' p={8}>
+      <Grid templateColumns={{ sm: '4fr 1fr', base: '4fr' }} p={8}>
         <GridItem>
           <Center>
-            <Heading as="h1" size="4xl">
+            <Heading as="h1">
               Elden Ring Checklist
             </Heading>
           </Center>
